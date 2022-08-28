@@ -1,3 +1,3 @@
 from pack import math
-a = math.perimeter()
-print(a.rectangle(5,10))
+a = math.area()
+print(a.circle(5))
