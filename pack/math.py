@@ -14,3 +14,9 @@ class perimeter:
     
     def eq_triangle(self,a):
         return 3*a
+
+    def parallelogram(self,a,b):
+        return 2(a+b)
+    
+    def trapezium(self,a,b,c,d):
+        return a+b+c+d
