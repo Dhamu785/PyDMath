@@ -52,3 +52,26 @@ class area:
 
     def isosceles_triangle(self,b,h):
         return (b*h)/2
+
+class volume:
+    pi = 22/7
+    def sphere(self,r):
+        return (4/3)*self.pi*(r**3)
+
+    def cylinder(self,r,h):
+        return self.pi*(r**2)*h
+
+    def cube(self,a):
+        return a**3
+
+    def rectangular_prism(self,l,b,h):
+        return l*b*h
+
+    def cone(self,r,h):
+        return (1/3)*self.pi*(r**2)*h
+
+    def right_rectangular_pyramid(self,l,w,h):
+        """           l = length 
+           w = width
+           h = height"""
+        return (l*w*h)/3
