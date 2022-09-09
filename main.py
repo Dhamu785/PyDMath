@@ -1,3 +1,3 @@
-from math_formula import mensuration
-a = mensuration.perimeter()
-print(a.circle(5))
+import math_formula
+a= math_formula.fact(3)
+print(a)
