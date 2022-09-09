@@ -1,3 +1,3 @@
-from pack import math
-a = math.perimeter()
+from pack import mensuration
+a = mensuration.perimeter()
 print(a.circle(5))
