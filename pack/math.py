@@ -71,6 +71,9 @@ class area:
         # slanting heights are same 
         # b = Base
         return (b*h)/2
+    
+    def rhombus(self,d):
+        return (1/2)*d*d
 
 class volume:
     pi = 22/7
