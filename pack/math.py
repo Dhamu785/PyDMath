@@ -2,18 +2,24 @@ import math
 class perimeter:
     pi = 22/7
     def circle(self,r):
+        # r = Radius of the circle
         return 2*self.pi*r
 
     def rectangle(self,l,b):
+        # l = Length of the 
+        # b = Breath of the Rectangle
         return 2*(l+b)
     
     def square(self,l):
+        # Length of the square
         return 4*l
 
     def triangle(self,a,b,c):
+        # Height, Slanting height and base
         return a+b+c
     
     def eq_triangle(self,a):
+        # eq_triangle all sides are equal
         return 3*a
 
     def parallelogram(self,a,b):
