@@ -1,3 +1,3 @@
 import math_formula
-a= math_formula.combination()
-print(a.comb(5,2))
+a= math_formula.permutation()
+print(a.per(4,1))

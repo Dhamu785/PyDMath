@@ -7,8 +7,15 @@ def fact(n):
 
 class permutation:
     def per(self,n,r):
-        return fact(n)/fact(n-r)
-    
+        if r < n:
+            return fact(n)/fact(n-r)
+        elif n == r:
+            return fact(n)
+        elif r == 1:
+            return n 
+        else:
+            print('Value Error')
+
 class combination:
     def comb(self,n,r):
         return fact(n)/(fact(r)*fact(n-r))
