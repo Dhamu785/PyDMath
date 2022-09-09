@@ -23,12 +23,15 @@ class perimeter:
         return 3*a
 
     def parallelogram(self,a,b):
+        # Breath and Height
         return 2*(a+b)
     
     def trapezium(self,a,b,c,d):
+        # Lenth of four different sides
         return a+b+c+d
 
     def isosceles_triangle(self,a,b):
+        # Base and Slanting height 
         A = 2*a
         return A+b
 
