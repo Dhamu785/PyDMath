@@ -1,6 +1,5 @@
 import math_formula
-a= math_formula.permutation()
-print(a.per(4,1))
+a= math_formula.perimeter()
+print(a.circle('4-cmss'))
 
-b = math_formula.ins('1-KM')
-print(b)
+

@@ -1,20 +1,26 @@
 import math
 def ins(x):
     y = x.split('-')
-    if y[1].lower() == 'cm':
+    if y[1].lower() == 'cm' or y[1].lower() == 'cms':
         return int(y[0])/100
     elif y[1].lower() == 'm':
         return int(y[0])
-    elif y[1].lower() == 'km':
+    elif y[1].lower() == 'km' or y[1].lower() == 'kms':
         return int(y[0])*1000
     elif y[1].lower() == 'mm':
         return int(y[0])/1000
+    else:
+        return 'Unit Invalid'
 
 class perimeter:
     pi = 22/7
     def circle(self,r):
         # r = Radius of the circle
-        return 2*self.pi*r
+        R = ins(r)
+        try:
+            return f'{2*self.pi*R} meter'
+        except Exception:
+            return 'Value Error'
 
     def rectangle(self,l,b):
         # l = Length of the 
