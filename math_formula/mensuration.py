@@ -1,4 +1,8 @@
 import math
+def ins(x):
+    y = x.split('-')
+    if y[1].lower() == 'cm':
+        return int(y[0])/100
 class perimeter:
     pi = 22/7
     def circle(self,r):
