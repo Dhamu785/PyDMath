@@ -28,5 +28,8 @@ obj = perimeter()
 print(obj.circle('2-cm'))
 ```
 
-### Shapes including
-```Circle``` ```Square```
+## Shapes includes
+### Perimeter and Area
+```Circle``` ```Square``` ```Rectangle``` ```Triangle``` ```Equilateral triangle``` ```Parallelogram``` ```Trapezium``` ```Isosceles triangle``` ```Rhombus```
+### Volume
+```Sphere``` ```Cylinder``` ```Cube``` ```Rectangular prism``` ```Cone``` ```Hemi sphere``` ```Right rectangular prism``` 
