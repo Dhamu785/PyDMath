@@ -1,4 +1,10 @@
 import math
+
+class min(Exception):
+    def __init__(self,msg):
+        self.msg = msg
+        print(self.msg)
+
 def ins(x):
     y = x.split('-')
     if len(y) == 2:
@@ -13,7 +19,7 @@ def ins(x):
         else:
             return 'Unit Invalid'
     else:
-        return 'Please specify this "-" as single time'
+        return '"-" Error'
 
 class perimeter:
     pi = 22/7
@@ -21,7 +27,10 @@ class perimeter:
         # r = Radius of the circle
         R = ins(r)
         try:
-            return f'{2*self.pi*R} meter'
+            if R == '"-" Error':
+                raise min('Please specify this "-" as single time')
+            else:
+                return f'{2*self.pi*R} meter'
         except Exception:
             return 'Value Error'
 
