@@ -41,7 +41,7 @@ print(f"Volume of the shape {vol.sphere('2-cm')}")
 ### Sample code
 ```python
 from PyDMath import fact,permutation,combination
-# factorial
+# Factorial
 print(fact(5))
 perm = permutation()
 co = combination()
