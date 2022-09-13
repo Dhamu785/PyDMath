@@ -6,12 +6,21 @@ This makes differ from other Python modules.
 ## Math topics included till now
 <ul>
   <li>Mensuration</li>
+  <ul>
+    <li>Area</li>
+    <li>Perimeter</li>
+    <li>Volume</li>
+   </ul>
   <li>Permutation</li>
   <li>Combination</li>
 </ul>
 
+## Input format
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Inputs must be a string seperated by "-" for value and the unit. Value on left side and unit on right side.
+
+# Mensuration
+### Sample code
 ```python
-# Sample Code
 from PyDMath import perimeter
 
 # Create object for the class
@@ -19,5 +28,5 @@ obj = perimeter()
 print(obj.circle('2-cm'))
 ```
 
-### Input format
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Inputs must be a string seperated by "-" for value and the unit. Value on left side and unit on right side.
+### Shapes including
+```Circle``` ```Square```
