@@ -12,7 +12,6 @@ This makes differ from other Python modules.
 
 ```python
 # Sample Code
-
 from PyDMath import perimeter
 
 # Create object for the class
