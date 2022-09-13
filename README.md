@@ -36,3 +36,14 @@ print(f"Volume of the shape {vol.sphere('2-cm')}")
 ```Circle``` ```Square``` ```Rectangle``` ```Triangle``` ```Equilateral triangle``` ```Parallelogram``` ```Trapezium``` ```Isosceles triangle``` ```Rhombus```
 ### Volume
 ```Sphere``` ```Cylinder``` ```Cube``` ```Rectangular prism``` ```Cone``` ```Hemi sphere``` ```Right rectangular prism``` 
+
+# Permutation and Combination
+### Sample code
+```python
+from PyDMath import fact,permutation,combination
+print(fact(5))
+perm = permutation()
+co = combination()
+print(perm.per(4,2))
+print(co.comb(8,3))
+```
