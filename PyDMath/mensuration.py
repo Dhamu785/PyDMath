@@ -1,9 +1,7 @@
 import math
 
-class min(Exception):
-    def __init__(self,msg):
-        self.msg = msg
-        print(self.msg)
+def min(msg):
+    return msg
 
 def ins(x):
     y = x.split('-')
@@ -28,10 +26,11 @@ class perimeter:
         R = ins(r)
         try:
             if R == '"-" Error':
-                raise min('Please specify this "-" as single time')
+                e = min('"-" Error')
+                return e
             else:
                 return f'{2*self.pi*R} meter'
-        except Exception:
+        except ZeroDivisionError:
             return 'Value Error'
 
     def rectangle(self,l,b):
