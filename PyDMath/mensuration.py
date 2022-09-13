@@ -1,16 +1,19 @@
 import math
 def ins(x):
     y = x.split('-')
-    if y[1].lower() == 'cm' or y[1].lower() == 'cms':
-        return int(y[0])/100
-    elif y[1].lower() == 'm':
-        return int(y[0])
-    elif y[1].lower() == 'km' or y[1].lower() == 'kms':
-        return int(y[0])*1000
-    elif y[1].lower() == 'mm':
-        return int(y[0])/1000
+    if len(y) == 2:
+        if y[1].lower() == 'cm' or y[1].lower() == 'cms':
+            return int(y[0])/100
+        elif y[1].lower() == 'm':
+            return int(y[0])
+        elif y[1].lower() == 'km' or y[1].lower() == 'kms':
+            return int(y[0])*1000
+        elif y[1].lower() == 'mm':
+            return int(y[0])/1000
+        else:
+            return 'Unit Invalid'
     else:
-        return 'Unit Invalid'
+        return 'Please specify this "-" as single time'
 
 class perimeter:
     pi = 22/7
