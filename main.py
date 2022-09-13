@@ -1,5 +1,5 @@
-import math_formula
-a= math_formula.perimeter()
+import PyDMath
+a= PyDMath.perimeter()
 print(a.circle('4-cmss'))
 
 
