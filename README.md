@@ -31,7 +31,7 @@ print(f"Area of the shape {ar.circle('2-cm')}")
 print(f"Volume of the shape {vol.sphere('2-cm')}")
 ```
 
-## Shapes includes
+## Shapes including
 ### Perimeter and Area
 ```Circle``` ```Square``` ```Rectangle``` ```Triangle``` ```Equilateral triangle``` ```Parallelogram``` ```Trapezium``` ```Isosceles triangle``` ```Rhombus```
 ### Volume
@@ -41,6 +41,7 @@ print(f"Volume of the shape {vol.sphere('2-cm')}")
 ### Sample code
 ```python
 from PyDMath import fact,permutation,combination
+# factorial
 print(fact(5))
 perm = permutation()
 co = combination()
