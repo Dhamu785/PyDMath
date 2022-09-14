@@ -1,46 +1,51 @@
 import math
 
-def splitting(x):
-    y = x.split('-')
-    try:
-        int(y[0])
-    except Exception:
-        return 'Type error'
-    if len(y) == 2:
-        if y[1].lower() == 'cm' or y[1].lower() == 'cms':
-            return int(y[0])/100
-        elif y[1].lower() == 'm':
-            return int(y[0])
-        elif y[1].lower() == 'km' or y[1].lower() == 'kms':
-            return int(y[0])*1000
-        elif y[1].lower() == 'mm':
-            return int(y[0])/1000
-        else:
-            return 'Unit Invalid'
-    else:
-        return '"-" Error'
-
-        
-def checking(val):
-    pi = 22/7
-    try:
-            if val == '"-" Error':
-                return 'Only one "-" allowed'
-            elif val == 'Type error':
-                return 'It accepts only the integer at first'
-            elif val == 'Unit Invalid':
-                return 'Unit Invalid'
+class validation:
+    def splitting(self,x):
+        y = x.split('-')
+        try:
+            int(y[0])
+        except Exception:
+            return 'Type error'
+        if len(y) == 2:
+            if y[1].lower() == 'cm' or y[1].lower() == 'cms':
+                return int(y[0])/100
+            elif y[1].lower() == 'm':
+                return int(y[0])
+            elif y[1].lower() == 'km' or y[1].lower() == 'kms':
+                return int(y[0])*1000
+            elif y[1].lower() == 'mm':
+                return int(y[0])/1000
             else:
-                return f'{2*pi*val} meter'
-    except Exception:
-            return 'Value Error'
+                return 'Unit Invalid'
+        elif len(y) < 2:
+            return 'one bar'
+        else:
+            return '"-" Error'
 
-class perimeter:
+
+    def checking(self,val):
+        pi = 22/7
+        try:
+                if val == '"-" Error':
+                    return 'Only one "-" allowed'
+                elif val == 'Type error':
+                    return 'It accepts only the integer at first'
+                elif val == 'Unit Invalid':
+                    return 'Unit Invalid'
+                elif val == 'one bar':
+                    return 'Please specify value and unit seperated by "-". Eg:3-cm'
+                else:
+                    return f'{2*pi*val} meter'
+        except Exception:
+                return 'Value Error'
+
+class perimeter(validation):
     pi = 22/7
     def circle(self,r):
         # r = Radius of the circle
-        R = splitting(r)
-        ans = checking(R)
+        R = self.splitting(r)
+        ans = self.checking(R)
         return ans
         
 
