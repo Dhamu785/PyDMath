@@ -1,10 +1,11 @@
 import math
 
-def min(msg):
-    return msg
-
-def ins(x):
+def splitting(x):
     y = x.split('-')
+    try:
+        int(y[0])
+    except Exception:
+        return 'Type error'
     if len(y) == 2:
         if y[1].lower() == 'cm' or y[1].lower() == 'cms':
             return int(y[0])/100
@@ -19,19 +20,29 @@ def ins(x):
     else:
         return '"-" Error'
 
+        
+def checking(val):
+    pi = 22/7
+    try:
+            if val == '"-" Error':
+                return 'Only one "-" allowed'
+            elif val == 'Type error':
+                return 'It accepts only the integer at first'
+            elif val == 'Unit Invalid':
+                return 'Unit Invalid'
+            else:
+                return f'{2*pi*val} meter'
+    except Exception:
+            return 'Value Error'
+
 class perimeter:
     pi = 22/7
     def circle(self,r):
         # r = Radius of the circle
-        R = ins(r)
-        try:
-            if R == '"-" Error':
-                e = min('"-" Error')
-                return e
-            else:
-                return f'{2*self.pi*R} meter'
-        except ZeroDivisionError:
-            return 'Value Error'
+        R = splitting(r)
+        ans = checking(R)
+        return ans
+        
 
     def rectangle(self,l,b):
         # l = Length of the 
