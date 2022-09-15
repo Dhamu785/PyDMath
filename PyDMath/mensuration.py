@@ -162,14 +162,17 @@ class perimeter(validation):
             return 'It requires three values and not equal to zero'
 
     
-    def eq_triangle(self,a):
+    def eq_triangle(self,a=0):
         # eq_triangle all sides are equal
-        A = self.splitting(a)
-        valA = self.checking(A)
-        if isinstance(valA,int) or isinstance(valA,float):
-            return f'{2*valA} meters'
+        if a != 0 :
+            A = self.splitting(a)
+            valA = self.checking(A)
+            if isinstance(valA,int) or isinstance(valA,float):
+                return f'{2*valA} meters'
+            else:
+                return valA
         else:
-            return valA
+            return 'It requires one value and not equal to zero'
 
     def parallelogram(self,a,b):
         # Breath and Height
