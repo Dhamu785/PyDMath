@@ -418,17 +418,51 @@ class volume(validation):
             return 'It requires three values and not equal to zero'
 
 
-    def cone(self,r,h):
+    def cone(self,r=0,h=0):
         # r = Radius
         # h = Height
-        return (1/3)*self.pi*(r**2)*h
+        if h != 0 and r != 0:
+            R = self.splitting(r)
+            valR = self.checking(R)
+            H = self.splitting(h)
+            valH = self.checking(H)
+            if (isinstance(valR,int) or isinstance(valR,float)) and (isinstance(valH,int) or isinstance(valH,float)):        
+                return f'{(1/3)*self.pi*(valR**2)*valH} meters'
+            else:
+                result = self.error_finder_two(valR,valH)
+                return result
+        else:
+            return 'It requires two values and not equal to zero'
 
-    def right_rectangular_pyramid(self,l,w,h):
+
+    def right_rectangular_pyramid(self,l=0,w=0,h=0):
         # l = length 
         # w = width
         # h = height
-        return (l*w*h)/3
+        if l != 0 and w != 0 and h != 0:
+            L = self.splitting(l)
+            valL = self.checking(L)
+            W = self.splitting(w)
+            valW = self.checking(W)
+            H = self.splitting(h)
+            valH = self.checking(H)
+            if (isinstance(valL,int) or isinstance(valL,float)) and (isinstance(valW,int) or isinstance(valW,float)) and (isinstance(valH,int) or isinstance(valH,float)):
+                return f'{(valL*valW*valH)/3} meters'
+            else:
+                result = self.error_finder_three(valL,valW,valH)
+                return result
+        else:
+            return 'It requires three values and not equal to zero'
 
-    def hemi_sphere(self,r):
+
+    def hemi_sphere(self,r=0):
         # r = Radius of sphere
-        return (2/3)*self.pi*(r**3)
+        if r != 0:
+            R = self.splitting(r)
+            valR = self.checking(R)
+            if isinstance(valR,int) or isinstance(valR,float):
+                return f'{(2/3)*self.pi*(valR**3)} meters'
+            else:
+                return valR
+        else:
+            return 'It requires one value and not equal to zero'

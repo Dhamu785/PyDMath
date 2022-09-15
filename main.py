@@ -1,3 +1,3 @@
 import PyDMath
-a= PyDMath.area()
-print(a.parallelogram('4ma','2-m'))
+a= PyDMath.volume()
+print(a.hemi_sphere('4-m'))
