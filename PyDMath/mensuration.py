@@ -217,7 +217,7 @@ class perimeter(validation):
             B = self.splitting(b)
             valB = self.checking(B)
             if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
-                return (2*valA)+valB
+                return f'{(2*valA)+valB} meters'
             else:
                 result = self.error_finder_two(valA,valB)
                 return result
@@ -232,13 +232,27 @@ class area(validation):
         if r != 0:
             R = self.splitting(r)
             valR = self.checking(R)
-            return self.pi*(valR**2)
+            if isinstance(valR,int) and (isinstance(valR,float)):
+                return f'{self.pi*(valR**2)} meters'
+            else:
+                return valR
         else:
             return 'It requires one value and not equal to zero'
 
-    def rectangle(self,w,l):
+    def rectangle(self,w=0,l=0):
         # Length and width
-        return w*l
+        if w != 0 and l != 0:
+            W = self.splitting(w)
+            valW = self.checking(W)
+            L = self.splitting(l)
+            valL = self.checking(L)
+            if (isinstance(valW,int) or isinstance(valW,float)) and (isinstance(valL,int) or isinstance(valL,float)):
+                return f'{valW*valL} meters'
+            else:
+                result = self.error_finder_two(valW,valL)
+                return result
+        else:
+            return 'It requires two values and not equal to zero'
 
     def square(self,a):
         # Length of the sides
