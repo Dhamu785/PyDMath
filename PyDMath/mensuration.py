@@ -80,7 +80,22 @@ class perimeter(validation):
 
     def triangle(self,a,b,c):
         # Height, Slanting height and base
-        return a+b+c
+        A = self.splitting(a)
+        valA = self.checking(A)
+        B = self.splitting(b)
+        valB = self.checking(B)
+        C = self.splitting(c)
+        valC = self.checking(C)
+        if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'{valA+valB+valC} meters'
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+            return f'Error ar value3 = {valC}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value1 = {valA}'
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error ar value3 = {valB}'
+        else:
+            return f'Value1 = {valA}, value2 = {valB}, value3 = {valC}'
     
     def eq_triangle(self,a):
         # eq_triangle all sides are equal
