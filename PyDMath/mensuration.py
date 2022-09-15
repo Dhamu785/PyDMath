@@ -35,8 +35,10 @@ class validation:
                     return 'Unit Invalid'
                 elif val == 'one bar':
                     return 'Please specify value and unit seperated by "-". Eg:3-cm'
+                elif isinstance(val,int) or isinstance(val,float):
+                    return val
                 else:
-                    return f'{2*pi*val} meter'
+                    return 'Something went wrong'
         except Exception:
                 return 'Value Error'
 
@@ -45,8 +47,11 @@ class perimeter(validation):
     def circle(self,r):
         # r = Radius of the circle
         R = self.splitting(r)
-        ans = self.checking(R)
-        return ans
+        val1 = self.checking(R)
+        try:
+            return f'{2*self.pi.val1} meters'
+        except Exception:
+            return Exception
         
 
     def rectangle(self,l,b):
