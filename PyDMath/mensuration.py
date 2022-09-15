@@ -217,7 +217,7 @@ class perimeter(validation):
             B = self.splitting(b)
             valB = self.checking(B)
             if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
-                return (2*a)+b
+                return (2*valA)+valB
             else:
                 result = self.error_finder_two(valA,valB)
                 return result
@@ -225,11 +225,16 @@ class perimeter(validation):
             return 'It requires two values and not equal to zero'
 
 
-class area:
+class area(validation):
     pi = 22/7
-    def circle(self,r):
+    def circle(self,r=0):
         # radius of circle
-        return self.pi*(r**2)
+        if r != 0:
+            R = self.splitting(r)
+            valR = self.checking(R)
+            return self.pi*(valR**2)
+        else:
+            return 'It requires one value and not equal to zero'
 
     def rectangle(self,w,l):
         # Length and width
