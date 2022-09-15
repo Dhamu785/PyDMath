@@ -71,7 +71,12 @@ class perimeter(validation):
     
     def square(self,l):
         # Length of the square
-        return 4*l
+        L = self.splitting(l)
+        valL = self.checking(L)
+        if isinstance(valL,int) or isinstance(valL,float):
+            return f'{4*valL} meters'
+        else:
+            return valL
 
     def triangle(self,a,b,c):
         # Height, Slanting height and base
