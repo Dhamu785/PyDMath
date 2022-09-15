@@ -254,21 +254,60 @@ class area(validation):
         else:
             return 'It requires two values and not equal to zero'
 
-    def square(self,a):
+    def square(self,a=0):
         # Length of the sides
-        return a**2
+        if a != 0:
+            A = self.splitting(a)
+            valA = self.checking(A)
+            if isinstance(valA,int) and (isinstance(valA,float)):
+                return f'{valA**2} meters'
+            else:
+                return valA
+        else:
+            return 'It requires one value and not equal to zero'
 
-    def triangle(self,b,h):
+    def triangle(self,b=0,h=0):
         # Bash and Height
-        return (1/2)*(b*h)
+        if b != 0 and h != 0:
+            B = self.splitting(b)
+            valB = self.checking(B)
+            H = self.splitting(h)
+            valH = self.checking(H)
+            if (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valH,int) or isinstance(valH,float)):
+                return f'{(1/2)*(valB*valH)} meters'
+            else:
+                result = self.error_finder_two(valB,valH)
+                return result
+        else:
+            return 'It requires two values and not equal to zero'
+            
     
-    def eq_triangle(self,a):
+    def eq_triangle(self,a=0):
         # Length of all sides
-        return (math.sqrt(3)/4)*(a**2)
+        if a != 0:
+            A = self.splitting(a)
+            valA = self.checking(A)
+            if isinstance(valA,int) or isinstance(valA,float):
+                return f'{(math.sqrt(3)/4)*(valA**2)} meters'
+            else:
+                return valA
+        else:
+            return 'It requires one value and not equal to zero'
 
-    def parallelogram(self,b,h):
+    def parallelogram(self,b=0,h=0):
         # bash and height
-        return b*h
+        if b != 0 and h != 0:
+            B = self.splitting(b)
+            valB = self.checking(B)
+            H = self.splitting(h)
+            valH = self.checking(H)
+            if (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valH,int) or isinstance(valH,float)):
+                return f'{valB*valH} meters'
+            else:
+                result = self.error_finder_two(valB,valH)
+                return result
+        else:
+            return 'It requires two values and not equal to zero'
 
     def trapezium(self,a,b,h):
         # opposite sides are equal

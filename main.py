@@ -1,3 +1,3 @@
 import PyDMath
 a= PyDMath.area()
-print(a.rectangle('4-m','2-m'))
+print(a.parallelogram('4ma','2-m'))
