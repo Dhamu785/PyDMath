@@ -49,7 +49,7 @@ class perimeter(validation):
         R = self.splitting(r)
         val1 = self.checking(R)
         try:
-            return f'{2*self.pi.val1} meters'
+            return f'{2*self.pi*val1} meters'
         except Exception:
             return Exception
         
