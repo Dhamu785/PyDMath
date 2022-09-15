@@ -309,40 +309,114 @@ class area(validation):
         else:
             return 'It requires two values and not equal to zero'
 
-    def trapezium(self,a,b,h):
+    def trapezium(self,a=0,b=0,h=0):
         # opposite sides are equal
         # h = Height
-        num = (a+b)/2
-        return num*h
+        if a != 0 and b != 0 and h != 0:
+            A = self.splitting(a)
+            valA = self.checking(A)
+            B = self.splitting(b)
+            valB = self.checking(B)
+            H = self.splitting(h)
+            valH = self.checking(H)
+            if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float) and isinstance(valH,int) or isinstance(valH,float)):
+                num = (valA+valB)/2
+                return f'{num*valH} meters'
+            else:
+                result = self.error_finder_three(valA,valB,valH)
+                return result
+        else:
+            return 'It requires three values and not equal to zero'
 
-    def isosceles_triangle(self,b,h):
+    def isosceles_triangle(self,b=0,h=0):
         # slanting heights are same 
         # b = Base
-        return (b*h)/2
+        if b != 0 and h != 0:
+            B = self.splitting(b)
+            valB = self.checking(B)
+            H = self.splitting(h)
+            valH = self.checking(H)
+            if (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valH,int) or isinstance(valH,float)):
+                return f'{(valB*valH)/2} meters'
+            else:
+                result = self.error_finder_two(valB,valH)
+                return result
+        else:
+            return 'It requires two values and not equal to zero'
+
     
-    def rhombus(self,d):
-        return (1/2)*d*d
+    def rhombus(self,d=0):
+        if d != 0:
+            D = self.splitting(d)
+            valD = self.checking(D)
+            if isinstance(valD,int) or isinstance(valD,float):
+                return f'{(1/2)*valD*valD} meters'
+            else:
+                return valD
+        else:
+            return 'It requires one value and not equal to zero'
 
-class volume:
+class volume(validation):
     pi = 22/7
-    def sphere(self,r):
+    def sphere(self,r=0):
         # r = Radius
-        return (4/3)*self.pi*(r**3)
+        if r != 0:
+            R = self.splitting(r)
+            valR = self.checking(R)
+            if isinstance(valR,int) or isinstance(valR,float):
+                return (4/3)*self.pi*(valR**3)
+            else:
+                return valR
+        else:
+            return 'It requires one value and not equal to zero'
 
-    def cylinder(self,r,h):
+    def cylinder(self,r=0,h=0):
         # r = Radius
         # h = Height
-        return self.pi*(r**2)*h
+        if r != 0 and h != 0:
+            R = self.splitting(r)
+            valR = self.checking(R)
+            H = self.splitting(h)
+            valH = self.checking(H)
+            if (isinstance(valH,int) or isinstance(valH,float)) and (isinstance(valR,int) or isinstance(valR,float)):
+                return f'{self.pi*(valR**2)*valH} meters'
+            else:
+                result = self.error_finder_two(valR,valH)
+                return result
+        else:
+            return 'It requires two values and not equal to zero'
 
-    def cube(self,a):
+    def cube(self,a=0):
         # a = Length of four sides
-        return a**3
+        if a != 0:
+            A = self.splitting(a)
+            valA = self.checking(A)
+            if isinstance(valA,int) or isinstance(valA,float):
+                return f'{valA**3} meters'
+            else:
+                return valA
+        else:
+            return 'It requires one value and not equal to zero'
 
-    def rectangular_prism(self,l,b,h):
+    def rectangular_prism(self,l=0,b=0,h=0):
         # l = length
         # b = Base
         # h = Height
-        return l*b*h
+        if l != 0 and b != 0 and h != 0:
+            L = self.splitting(l)
+            valL = self.checking(L)
+            B = self.splitting(b)
+            valB  = self.checking(B)
+            H = self.splitting(h)
+            valH = self.checking(H)
+            if (isinstance(valL,int) or isinstance(valL,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valH,int) or isinstance(valH,float)):
+                return f'{valL*valB*valH} meters'
+            else:
+                result = self.error_finder_three(valL,valB,valH)
+                return result
+        else:
+            return 'It requires three values and not equal to zero'
+
 
     def cone(self,r,h):
         # r = Radius
