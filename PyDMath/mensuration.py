@@ -209,10 +209,21 @@ class perimeter(validation):
         else:
             return 'It requires four values and not equal to zero'
 
-    def isosceles_triangle(self,a,b):
+    def isosceles_triangle(self,a=0,b=0):
         # Base and Slanting height 
-        A = 2*a
-        return A+b
+        if a != 0 and b != 0:
+            A = self.splitting(a)
+            valA = self.checking(A)
+            B = self.splitting(b)
+            valB = self.checking(B)
+            if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+                return (2*a)+b
+            else:
+                result = self.error_finder_two(valA,valB)
+                return result
+        else:
+            return 'It requires two values and not equal to zero'
+
 
 class area:
     pi = 22/7
