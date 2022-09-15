@@ -174,20 +174,21 @@ class perimeter(validation):
         else:
             return 'It requires one value and not equal to zero'
 
-    def parallelogram(self,a,b):
+    def parallelogram(self,a=0,b=0):
         # Breath and Height
-        A = self.splitting(a)
-        valA = self.checking(A)
-        B = self.splitting(b)
-        valB = self.checking(B)
-        if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
-            return f'{2*(valA+valB)} meters'
-        elif isinstance(valA,int) or isinstance(valA,float):
-            return f'Error ar value2 = {valB}'
-        elif isinstance(valB,int) or isinstance(valB,float):
-            return f'Error at value1 = {valA}'
+        if a != 0 and b != 0:
+            A = self.splitting(a)
+            valA = self.checking(A)
+            B = self.splitting(b)
+            valB = self.checking(B)
+            if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+                return f'{2*(valA+valB)} meters'
+            else:
+                result = self.error_finder_two(valA,valB)
+                return result
         else:
-            return f'Value1 = {valA}, value2 = {valB}'
+            return 'It requires two values and not equal to zero'
+
     
     def trapezium(self,a=0,b=0,c=0,d=0):
         # Lenth of four different sides
@@ -206,7 +207,7 @@ class perimeter(validation):
                 result = self.error_finder_four(valA,valB,valC,valD)
                 return result
         else:
-            return 'It requires four values'
+            return 'It requires four values and not equal to zero'
 
     def isosceles_triangle(self,a,b):
         # Base and Slanting height 
