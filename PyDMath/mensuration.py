@@ -40,62 +40,127 @@ class validation:
                     return 'Something went wrong'
         except Exception:
                 return Exception
-
-class perimeter(validation):
-    pi = 22/7
-    def circle(self,r):
-        # r = Radius of the circle
-        R = self.splitting(r)
-        val1 = self.checking(R)
-        if isinstance(val1,int) or isinstance(val1,float):
-            return f'{2*self.pi*val1} meters'
-        else:
-            return val1
         
+    def error_finder_four(self,valA,valB,valC,valD):
+        if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value4 = {valD}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error ar value3 = {valC}'
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error ar value2 = {valB}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value1 = {valA}'
 
-    def rectangle(self,l,b):
-        # l = Length of the 
-        # b = Breath of the Rectangle
-        L = self.splitting(l)
-        valL = self.checking(L)
-        B = self.splitting(b)
-        valB = self.checking(B)
-        if (isinstance(valL,int) or isinstance(valL,float)) and (isinstance(valB,int) or isinstance(valB,float)):
-            return f'{2*(valL+valB)} meters'
-        elif isinstance(valL,int) or isinstance(valL,float):
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+            return f'Error at value3 = {valC}, Error at value4 = {valD}'
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value2 = {valB}, Error at value4 = {valD}'
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value2 = {valB}, Error at value3 = {valC}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value1 = {valA}, Error at value4 = {valD}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value1 = {valA}, Error at value3 = {valC}'
+        elif (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value1 = {valA}, Error at value2 = {valB}'
+            
+        elif (isinstance(valA,int) or isinstance(valA,float)):
+            return f'Error at value2 = {valB}, Error at value3 = {valC}, Error at value4 = {valD}'
+        elif (isinstance(valB,int) or isinstance(valB,float)):
+            return f'Error at value1 = {valA}, Error at value3 = {valC}, Error at value4 = {valD}'
+        elif (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value1 = {valA}, Error at value2 = {valB}, Error at value4 = {valD}'
+        elif (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value1 = {valA}, Error at value2 = {valB}, Error at value3 = {valC}'
+        else:
+            return f'Error at value1 = {valA}, Error at value2 = {valB}, Error at value3 = {valC}, Error at value4 = {valD}'
+
+    def error_finder_two(self,valA,valB):
+        if isinstance(valA,int) or isinstance(valA,float):
             return f'Error ar value2 = {valB}'
         elif isinstance(valB,int) or isinstance(valB,float):
-            return f'Error at value1 = {valL}'
+            return f'Error at value1 = {valA}'
         else:
-            return f'Value1 = {valL}, value2 = {valB}'
-    
-    def square(self,l):
-        # Length of the square
-        L = self.splitting(l)
-        valL = self.checking(L)
-        if isinstance(valL,int) or isinstance(valL,float):
-            return f'{4*valL} meters'
-        else:
-            return valL
+            return f'Value1 = {valA}, value2 = {valB}'
 
-    def triangle(self,a,b,c):
-        # Height, Slanting height and base
-        A = self.splitting(a)
-        valA = self.checking(A)
-        B = self.splitting(b)
-        valB = self.checking(B)
-        C = self.splitting(c)
-        valC = self.checking(C)
-        if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
-            return f'{valA+valB+valC} meters'
-        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+    def error_finder_three(self,valA,valB,valC):
+        if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
             return f'Error ar value3 = {valC}'
         elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
             return f'Error at value1 = {valA}'
         elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valC,int) or isinstance(valC,float)):
             return f'Error ar value3 = {valB}'
+        elif isinstance(valA,int) or isinstance(valA,float):
+            return f'Error at value2 = {valB}, Error at value3 = {valC}'
+        elif isinstance(valB,int) or isinstance(valB,float):
+            return f'Error at value1 = {valA}, Error at value3 = {valC}'
+        elif isinstance(valC,int) or isinstance(valC,float):
+            return f'Error at value1 = {valA}, Error at value2 = {valB}'
         else:
-            return f'Value1 = {valA}, value2 = {valB}, value3 = {valC}'
+                return f'Value1 = {valA}, value2 = {valB}, value3 = {valC}'
+
+class perimeter(validation):
+    pi = 22/7
+    def circle(self,r=0):
+        # r = Radius of the circle
+        if r != 0:
+            R = self.splitting(r)
+            val1 = self.checking(R)
+            if isinstance(val1,int) or isinstance(val1,float):
+                return f'{2*self.pi*val1} meters'
+            else:
+                return val1
+        else:
+            return 'It requires one value and not equal to zero'
+        
+
+    def rectangle(self,l=0,b=0):
+        # l = Length of the 
+        # b = Breath of the Rectangle
+        if l != 0 and b != 0:
+            L = self.splitting(l)
+            valL = self.checking(L)
+            B = self.splitting(b)
+            valB = self.checking(B)
+            if (isinstance(valL,int) or isinstance(valL,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+                return f'{2*(valL+valB)} meters'
+            else:
+                result = self.error_finder_two(valL,valB)
+                return result
+        else:
+            return 'It requires two values and not equal to zero'
+
+    
+    def square(self,l=0):
+        # Length of the square
+        if l != 0:
+            L = self.splitting(l)
+            valL = self.checking(L)
+            if isinstance(valL,int) or isinstance(valL,float):
+                return f'{4*valL} meters'
+            else:
+                return valL
+        else:
+            return 'It requires one value and not equal to zero'
+
+
+    def triangle(self,a=0,b=0,c=0):
+        # Height, Slanting height and base
+        if a != 0 and b != 0 and c != 0:
+            A = self.splitting(a)
+            valA = self.checking(A)
+            B = self.splitting(b)
+            valB = self.checking(B)
+            C = self.splitting(c)
+            valC = self.checking(C)
+            if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+                return f'{valA+valB+valC} meters'
+            else:
+                result = self.error_finder_three(valA,valB,valC)
+                return result
+        else:
+            return 'It requires three values and not equal to zero'
+
     
     def eq_triangle(self,a):
         # eq_triangle all sides are equal
@@ -121,51 +186,24 @@ class perimeter(validation):
         else:
             return f'Value1 = {valA}, value2 = {valB}'
     
-    def trapezium(self,a,b,c,d):
+    def trapezium(self,a=0,b=0,c=0,d=0):
         # Lenth of four different sides
-        A = self.splitting(a)
-        valA = self.checking(A)
-        B = self.splitting(b)
-        valB = self.checking(B)
-        C = self.splitting(c)
-        valC = self.checking(C)
-        D = self.splitting(d)
-        valD = self.checking(D)
-        if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
-            return f'{valA+valB+valC+valD} meters'
-
-        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
-            return f'Error at value4 = {valD}'
-        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valD,int) or isinstance(valD,float)):
-            return f'Error ar value3 = {valC}'
-        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
-            return f'Error ar value2 = {valB}'
-        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
-            return f'Error at value1 = {valA}'
-        
-        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
-            return f'Error at value3 = {valC}, Error at value4 = {valD}'
-        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valC,int) or isinstance(valC,float)):
-            return f'Error at value2 = {valB}, Error at value4 = {valD}'
-        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valD,int) or isinstance(valD,float)):
-            return f'Error at value2 = {valB}, Error at value3 = {valC}'
-        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
-            return f'Error at value1 = {valA}, Error at value4 = {valD}'
-        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valD,int) or isinstance(valD,float)):
-            return f'Error at value1 = {valA}, Error at value3 = {valC}'
-        elif (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
-            return f'Error at value1 = {valA}, Error at value2 = {valB}'
-            
-        elif (isinstance(valA,int) or isinstance(valA,float)):
-            return f'Error at value2 = {valB}, Error at value3 = {valC}, Error at value4 = {valD}'
-        elif (isinstance(valB,int) or isinstance(valB,float)):
-            return f'Error at value1 = {valA}, Error at value3 = {valC}, Error at value4 = {valD}'
-        elif (isinstance(valC,int) or isinstance(valC,float)):
-            return f'Error at value1 = {valA}, Error at value2 = {valB}, Error at value4 = {valD}'
-        elif (isinstance(valD,int) or isinstance(valD,float)):
-            return f'Error at value1 = {valA}, Error at value2 = {valB}, Error at value3 = {valC}'
+        if a != 0 and b != 0 and c != 0 and d != 0:
+            A = self.splitting(a)
+            valA = self.checking(A)
+            B = self.splitting(b)
+            valB = self.checking(B)
+            C = self.splitting(c)
+            valC = self.checking(C)
+            D = self.splitting(d)
+            valD = self.checking(D)
+            if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+                return f'{valA+valB+valC+valD} meters'
+            else:
+                result = self.error_finder_four(valA,valB,valC,valD)
+                return result
         else:
-            return f'Value1 = {valA}, value2 = {valB}, value3 = {valC}, value4 = {valD}'
+            return 'It requires four values'
 
     def isosceles_triangle(self,a,b):
         # Base and Slanting height 
