@@ -31,7 +31,7 @@ class validation:
                 elif val == 'Type Error':
                     return 'It accepts only the integer at first'
                 elif val == 'Unit Invalid':
-                    return 'Unit Invalid'
+                    return 'Invalid Unit'
                 elif val == 'one bar':
                     return 'Please specify value and unit seperated by "-". Eg:3-cm'
                 elif isinstance(val,int) or isinstance(val,float):
@@ -56,7 +56,18 @@ class perimeter(validation):
     def rectangle(self,l,b):
         # l = Length of the 
         # b = Breath of the Rectangle
-        return 2*(l+b)
+        L = self.splitting(l)
+        valL = self.checking(L)
+        B = self.splitting(b)
+        valB = self.checking(B)
+        if (isinstance(valL,int) or isinstance(valL,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+            return f'{2*(valL+valB)} meters'
+        elif isinstance(valL,int) or isinstance(valL,float):
+            return f'Error ar value2 = {valB}'
+        elif isinstance(valB,int) or isinstance(valB,float):
+            return f'Error at value1 = {valL}'
+        else:
+            return f'Value1 = {valL}, value2 = {valB}'
     
     def square(self,l):
         # Length of the square

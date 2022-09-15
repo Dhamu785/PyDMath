@@ -1,3 +1,3 @@
 import PyDMath
 a= PyDMath.perimeter()
-print(a.circle('44-km'))
+print(a.rectangle('42-k-m','2-cmr'))
