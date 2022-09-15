@@ -6,7 +6,7 @@ class validation:
         try:
             int(y[0])
         except Exception:
-            return 'Type error'
+            return 'Type Error'
         if len(y) == 2:
             if y[1].lower() == 'cm' or y[1].lower() == 'cms':
                 return int(y[0])/100
@@ -25,11 +25,10 @@ class validation:
 
 
     def checking(self,val):
-        pi = 22/7
         try:
                 if val == '"-" Error':
                     return 'Only one "-" allowed'
-                elif val == 'Type error':
+                elif val == 'Type Error':
                     return 'It accepts only the integer at first'
                 elif val == 'Unit Invalid':
                     return 'Unit Invalid'
@@ -40,7 +39,7 @@ class validation:
                 else:
                     return 'Something went wrong'
         except Exception:
-                return 'Value Error'
+                return Exception
 
 class perimeter(validation):
     pi = 22/7
@@ -48,10 +47,10 @@ class perimeter(validation):
         # r = Radius of the circle
         R = self.splitting(r)
         val1 = self.checking(R)
-        try:
+        if isinstance(val1,int) or isinstance(val1,float):
             return f'{2*self.pi*val1} meters'
-        except Exception:
-            return Exception
+        else:
+            return val1
         
 
     def rectangle(self,l,b):
