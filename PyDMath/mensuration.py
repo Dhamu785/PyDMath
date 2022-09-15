@@ -99,15 +99,73 @@ class perimeter(validation):
     
     def eq_triangle(self,a):
         # eq_triangle all sides are equal
-        return 3*a
+        A = self.splitting(a)
+        valA = self.checking(A)
+        if isinstance(valA,int) or isinstance(valA,float):
+            return f'{2*valA} meters'
+        else:
+            return valA
 
     def parallelogram(self,a,b):
         # Breath and Height
-        return 2*(a+b)
+        A = self.splitting(a)
+        valA = self.checking(A)
+        B = self.splitting(b)
+        valB = self.checking(B)
+        if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+            return f'{2*(valA+valB)} meters'
+        elif isinstance(valA,int) or isinstance(valA,float):
+            return f'Error ar value2 = {valB}'
+        elif isinstance(valB,int) or isinstance(valB,float):
+            return f'Error at value1 = {valA}'
+        else:
+            return f'Value1 = {valA}, value2 = {valB}'
     
     def trapezium(self,a,b,c,d):
         # Lenth of four different sides
-        return a+b+c+d
+        A = self.splitting(a)
+        valA = self.checking(A)
+        B = self.splitting(b)
+        valB = self.checking(B)
+        C = self.splitting(c)
+        valC = self.checking(C)
+        D = self.splitting(d)
+        valD = self.checking(D)
+        if (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'{valA+valB+valC+valD} meters'
+
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value4 = {valD}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error ar value3 = {valC}'
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error ar value2 = {valB}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value1 = {valA}'
+        
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valB,int) or isinstance(valB,float)):
+            return f'Error at value3 = {valC}, Error at value4 = {valD}'
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value2 = {valB}, Error at value4 = {valD}'
+        elif (isinstance(valA,int) or isinstance(valA,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value2 = {valB}, Error at value3 = {valC}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value1 = {valA}, Error at value4 = {valD}'
+        elif (isinstance(valB,int) or isinstance(valB,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value1 = {valA}, Error at value3 = {valC}'
+        elif (isinstance(valC,int) or isinstance(valC,float)) and (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value1 = {valA}, Error at value2 = {valB}'
+            
+        elif (isinstance(valA,int) or isinstance(valA,float)):
+            return f'Error at value2 = {valB}, Error at value3 = {valC}, Error at value4 = {valD}'
+        elif (isinstance(valB,int) or isinstance(valB,float)):
+            return f'Error at value1 = {valA}, Error at value3 = {valC}, Error at value4 = {valD}'
+        elif (isinstance(valC,int) or isinstance(valC,float)):
+            return f'Error at value1 = {valA}, Error at value2 = {valB}, Error at value4 = {valD}'
+        elif (isinstance(valD,int) or isinstance(valD,float)):
+            return f'Error at value1 = {valA}, Error at value2 = {valB}, Error at value3 = {valC}'
+        else:
+            return f'Value1 = {valA}, value2 = {valB}, value3 = {valC}, value4 = {valD}'
 
     def isosceles_triangle(self,a,b):
         # Base and Slanting height 
