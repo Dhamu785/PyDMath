@@ -1,3 +1,5 @@
 import PyDMath
-a= PyDMath.volume()
-print(a.hemi_sphere('4-m'))
+a= PyDMath.combination()
+b = input()
+c = input()
+print(a.comb(b,c))
