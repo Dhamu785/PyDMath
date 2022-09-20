@@ -24,9 +24,20 @@ def lcm(*args):
     r = []
     for i in args:
         r.append(int(i))
+    r.sort()
     if len(r) == 2:
         lcm1 = np.product(r) / int(hcf1)
         return lcm1
+    if len(r) == 3:
+        x = []
+        y = []
+        z = []
+        for i in range(1,6):
+            x.append(r[0]*i)
+            y.append(r[1]*i)
+            z.append(r[2]*i)
+        print(x,y,z)
+
 
 print(hcf(4,6))
 print(lcm(4,6))
