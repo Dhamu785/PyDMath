@@ -5,7 +5,7 @@ def hcf(*args):
         try:
             q.append(int(i))
         except:
-            return 'It requires only numbers'
+            return 'It accepts only numbers'
     q.sort()
     if len(q) == 2:
         for j in range(q[0],0,-1):
@@ -29,7 +29,10 @@ def lcm(*args):
     hcf1 = hcf(*args)
     r = []
     for i in args:
-        r.append(int(i))
+        try:
+            r.append(int(i))
+        except:
+            return 'It accepts only numbers'
     r.sort()
     if len(r) == 2:
         lcm1 = np.product(r) / int(hcf1)
