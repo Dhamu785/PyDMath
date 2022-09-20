@@ -15,6 +15,12 @@ def hcf(*args):
         for j in range(q[0],0,-1):
             if (q[0]%j == 0) and (q[1]%j == 0) and (q[2]% j == 0):
                 return j
+    
+    elif len(q) == 4:
+        for j in range(q[0],0,-1):
+            if (q[0]%j == 0) and (q[1]%j == 0) and (q[2]% j == 0) and (q[3]% j == 0):
+                return j
+            
     else:
         return 'It accepts only 5 values'
             
@@ -28,5 +34,4 @@ def lcm(*args):
         lcm1 = np.product(r) / int(hcf1)
         return lcm1
 
-print(hcf(4,6))
-print(lcm(4,6))
+print(hcf(4,6,8,48))
