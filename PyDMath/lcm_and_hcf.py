@@ -38,11 +38,13 @@ def lcm(*args):
         x = []
         y = []
         z = []
-        for i in range(1,6):
-            x.append(r[0]*i)
-            y.append(r[1]*i)
-            z.append(r[2]*i)
-        print(x,y,z)
-
-
-print(hcf(4,6,8,50))
+        extend = 5
+        while True:
+            for i in range(1,extend):
+                x.append(r[0]*i)
+                y.append(r[1]*i)
+                z.append(r[2]*i)
+            for j in x:
+                if (j in y) and (j in z):
+                    return j
+            extend = extend+5

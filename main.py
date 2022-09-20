@@ -1,5 +1,3 @@
 import PyDMath
-a= PyDMath.combination()
-b = input()
-c = input()
-print(a.comb(b,c))
+a= PyDMath.lcm(5,8,15)
+print(a)
