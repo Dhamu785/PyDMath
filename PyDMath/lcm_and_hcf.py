@@ -38,13 +38,15 @@ def lcm(*args):
         x = []
         y = []
         z = []
+        pre_extend = 1
         extend = 5
         while True:
-            for i in range(1,extend):
+            for i in range(pre_extend,extend):
                 x.append(r[0]*i)
                 y.append(r[1]*i)
                 z.append(r[2]*i)
             for j in x:
                 if (j in y) and (j in z):
                     return j
+            pre_extend = extend
             extend = extend+5
