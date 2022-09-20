@@ -34,4 +34,4 @@ def lcm(*args):
         lcm1 = np.product(r) / int(hcf1)
         return lcm1
 
-print(hcf(4,6,8,48))
+print(hcf(4,6,8,50))
