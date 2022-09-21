@@ -5,7 +5,7 @@ def hcf(*args):
         try:
             q.append(int(i))
         except:
-            return 'It requires only numbers'
+            return 'It accepts only numbers'
     q.sort()
     if len(q) == 2:
         for j in range(q[0],0,-1):
@@ -22,16 +22,60 @@ def hcf(*args):
                 return j
             
     else:
-        return 'It accepts only 5 values'
+        return 'It accepts only 4 values'
             
 
 def lcm(*args):
     hcf1 = hcf(*args)
     r = []
     for i in args:
-        r.append(int(i))
+        try:
+            r.append(int(i))
+        except:
+            return 'It accepts only numbers'
+    r.sort()
     if len(r) == 2:
         lcm1 = np.product(r) / int(hcf1)
-        return lcm1
+        return int(lcm1)
+    elif len(r) == 3:
+        x = []
+        y = []
+        z = []
+        pre_extend = 1
+        extend = 5
+        while True:
+            for i in range(pre_extend,extend):
+                x.append(r[0]*i)
+                y.append(r[1]*i)
+                z.append(r[2]*i)
+            for j in x:
+                if (j in y) and (j in z):
+                    return j
+            pre_extend = extend
+            extend = extend+5
+        
+    elif len(r) == 4:
+        w = []
+        x = []
+        y = []
+        z = []
+        pre_extend = 1
+        extend = 5
+        while True:
+            for i in range(pre_extend,extend):
+                w.append(r[0]*i)
+                x.append(r[1]*i)
+                y.append(r[2]*i)
+                z.append(r[3]*i)
+            for j in w:
+                if (j in x) and (j in y) and (j in z):
+                    return j
+            pre_extend = extend
+            extend = extend+5
 
+<<<<<<< HEAD
 print(hcf(4,6,18,25))
+=======
+    else:
+        return 'It accepts only 4 values'
+>>>>>>> d5a9dcaf67c64a76e0e03b2e55d1100d11b5df1e
