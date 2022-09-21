@@ -72,10 +72,5 @@ def lcm(*args):
                     return j
             pre_extend = extend
             extend = extend+5
-
-<<<<<<< HEAD
-print(hcf(4,6,18,25))
-=======
     else:
         return 'It accepts only 4 values'
->>>>>>> d5a9dcaf67c64a76e0e03b2e55d1100d11b5df1e
