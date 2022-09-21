@@ -1,3 +1,4 @@
-import PyDMath
-a= PyDMath.lcm(5,8,15,23)
-print(a)
+from PyDMath import hcf,lcm
+ins = input()
+s = ins.strip()
+print(lcm(s.split(' ')))
