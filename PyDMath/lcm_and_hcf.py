@@ -81,7 +81,8 @@ def lcm(args):
         z = []
         pre_extend = 1
         extend = 5
-        while True:
+        count = 0
+        while count <= 100:
             for i in range(pre_extend,extend):
                 w.append(r[0]*i)
                 x.append(r[1]*i)
@@ -90,6 +91,9 @@ def lcm(args):
             for j in z:
                 if (j in w) and (j in x) and (j in y):
                     return j
+            count += 1
+            if count == 100:
+                return 'Error occured'
             print(w,x,y,z)
             pre_extend = extend
             extend = extend+5
