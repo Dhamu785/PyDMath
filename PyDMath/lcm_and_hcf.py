@@ -1,4 +1,6 @@
 import numpy as np
+import math
+
 def hcf(args):
     q = []
     for i in args:
