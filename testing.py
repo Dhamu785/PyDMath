@@ -1,4 +1,9 @@
 import PyDMath
-
-
-print(PyDMath.lcm([45,8,25,91,'111w']))
+a = input()
+try:
+    b = a.split(',')
+    print(b)
+except:
+    print('123')
+# print(b)
+print(PyDMath.lcm(b))
