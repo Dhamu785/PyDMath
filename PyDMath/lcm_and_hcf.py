@@ -131,7 +131,7 @@ def lcm(lit):
             for i in lit:
                 li.append(int(i))
         except:
-            return 'It accepts only numbers'
+            return 'Please enter numbers seperated by space'
 
         prime_no = [2,3,5,7,11,13,17,19,23,29,31,37,41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
         prime_factors = []
