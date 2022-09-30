@@ -13,9 +13,17 @@ class divisor:
         cvted_lst = self.cvt_lst(n)
         if isinstance(cvted_lst,list):
             if cvted_lst[-1]%2 == 0:
-                return 'divided by 2'
+                return 'The number is divided by 2'
             elif sum(cvted_lst) % 3 == 0:
-                return 'divided by 3'
+                return 'The number is divided by 3'
+            elif int(str(cvted_lst[-2])+ str(cvted_lst[-1])) % 4 == 0:
+                return 'The number is divided by 4'
+            elif (cvted_lst[-1] == 0) or (cvted_lst[-1] == 5):
+                return 'The number is divided by 5'
+            elif (cvted_lst[-1]%2 == 0) and (sum(cvted_lst) % 3 == 0):
+                return 'The number is divided by 6'
+            elif sum(cvted_lst) % 9 == 0:
+                return 'The number is divided by 9'
             else:
                 return 'Null'
         else:
