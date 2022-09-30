@@ -4,4 +4,4 @@ from PyDMath import hcf,lcm,divisor
 # print(lcm(s.split(' '))) 
 
 a= divisor()
-print(a.div('235'))
+print(a.div('2350'))
