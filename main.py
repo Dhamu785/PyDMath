@@ -1,7 +1,6 @@
-from PyDMath import hcf,lcm,divisor
+from PyDMath import hcf,lcm,div
 # ins = input()
 # s = ins.strip()
 # print(lcm(s.split(' '))) 
 
-a= divisor()
-print(a.div('622'))
+print(div('97'))

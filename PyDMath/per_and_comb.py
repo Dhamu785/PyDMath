@@ -48,3 +48,9 @@ class combination:
                 return 'Both must be numbers'
         else:
             return 'It requires two values'
+
+def div(n):
+    num = int(n)
+    for i in range(2,num+1):
+        if num%i == 0:
+            return f'The number is divided by {i}'

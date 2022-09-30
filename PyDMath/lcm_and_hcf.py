@@ -153,7 +153,7 @@ def lcm(lit):
                         break
             return math.prod(prime_factors)
 
-        if len(li) == 3:
+        elif len(li) == 3:
             while li[0] > 1.0 or li[1] > 1.0 or li[2] > 1:
                 for i in prime_no:
                     count = 0
@@ -171,7 +171,7 @@ def lcm(lit):
                         break
             return math.prod(prime_factors)
 
-        if len(li) == 4:
+        elif len(li) == 4:
             while li[0] > 1.0 or li[1] > 1.0 or li[2] > 1 or li[3] > 1:
                 for i in prime_no:
                     count = 0
@@ -192,7 +192,7 @@ def lcm(lit):
                         break
             return math.prod(prime_factors)
 
-        if len(li) == 5:
+        elif len(li) == 5:
             while li[0] > 1.0 or li[1] > 1.0 or li[2] > 1 or li[3] > 1 or li[4] > 1:
                 for i in prime_no:
                     count = 0
