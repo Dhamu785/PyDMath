@@ -3,4 +3,4 @@ from PyDMath import hcf,lcm,div
 # s = ins.strip()
 # print(lcm(s.split(' '))) 
 
-print(div('97'))
+print(div('97r'))

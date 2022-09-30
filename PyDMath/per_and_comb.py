@@ -50,7 +50,10 @@ class combination:
             return 'It requires two values'
 
 def div(n):
-    num = int(n)
+    try:
+        num = int(n)
+    except:
+        return 'The inputs must be a number'
     for i in range(2,num+1):
         if num%i == 0:
             return f'The number is divided by {i}'
