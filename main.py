@@ -1,6 +1,3 @@
-from PyDMath import hcf,lcm,div
-# ins = input()
-# s = ins.strip()
-# print(lcm(s.split(' '))) 
-
-print(div('7919'))
+from PyDMath import year
+a = year()
+print(a.leap_year(2022))
