@@ -1,3 +1,3 @@
 from PyDMath import year
 a = year()
-print(a.leap_year(2022))
+print(a.leap_year('43'))
