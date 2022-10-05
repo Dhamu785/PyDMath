@@ -1,2 +1,2 @@
 from PyDMath import div
-print(div(45))
+print(type(div(45)))
