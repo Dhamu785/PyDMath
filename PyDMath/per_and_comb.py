@@ -56,4 +56,4 @@ def div(n):
         return 'The inputs must be a number'
     for i in range(2,num+1):
         if num%i == 0:
-            return i
+            return f'The number is divided by {i}'
