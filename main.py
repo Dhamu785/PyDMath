@@ -1,3 +1,2 @@
-from PyDMath import year
-a = year()
-print(a.leap_year('43'))
+from PyDMath import div
+print(div(45))
