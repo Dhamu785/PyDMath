@@ -1,2 +1,4 @@
-from PyDMath import div
-print(type(div(45)))
+from PyDMath import hcf
+a= input()
+
+print(hcf(a.split(' ')))

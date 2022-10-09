@@ -3,36 +3,38 @@ import math
 
 def hcf(args):
     q = []
-    for i in args:
-        try:
-            q.append(int(i))
-        except:
-            return 'It accepts only numbers'
-    q.sort()
-    if len(q) == 1:
-        return 'It does not accept single value'
-    if len(q) == 2:
-        for j in range(q[0],0,-1):
-            if (q[0] % j == 0) and (q[1] % j == 0):
-                return j
-    elif len(q) == 3:
-        for j in range(q[0],0,-1):
-            if (q[0]%j == 0) and (q[1]%j == 0) and (q[2]% j == 0):
-                return j
+    if isinstance(args, list):
+        for i in args:
+            try:
+                q.append(int(i))
+            except:
+                return 'It accepts only numbers'
+        q.sort()
+        if len(q) == 1:
+            return 'It does not accept single value'
+        if len(q) == 2:
+            for j in range(q[0],0,-1):
+                if (q[0] % j == 0) and (q[1] % j == 0):
+                    return j
+        elif len(q) == 3:
+            for j in range(q[0],0,-1):
+                if (q[0]%j == 0) and (q[1]%j == 0) and (q[2]% j == 0):
+                    return j
     
-    elif len(q) == 4:
-        for j in range(q[0],0,-1):
-            if (q[0]%j == 0) and (q[1]%j == 0) and (q[2]% j == 0) and (q[3]% j == 0):
-                return j
+        elif len(q) == 4:
+            for j in range(q[0],0,-1):
+                if (q[0]%j == 0) and (q[1]%j == 0) and (q[2]% j == 0) and (q[3]% j == 0):
+                    return j
     
-    elif len(q) == 5:
-        for j in range(q[0],0,-1):
-            if (q[0]%j == 0) and (q[1]%j == 0) and (q[2]% j == 0) and (q[3]% j == 0) and (q[4]%j ==0):
-                return j
+        elif len(q) == 5:
+            for j in range(q[0],0,-1):
+                if (q[0]%j == 0) and (q[1]%j == 0) and (q[2]% j == 0) and (q[3]% j == 0) and (q[4]%j ==0):
+                    return j
             
+        else:
+            return 'It accepts only 5 values'
     else:
-        return 'It accepts only 5 values'
-            
+        return 'Values must be seperated by space'
 
 def lcm2(args):
     r = []
@@ -217,7 +219,8 @@ def lcm(lit):
             return math.prod(prime_factors)
 
     else:
-        return 'List required'
+        return 'Values must be seperated by space'
+
 
 
 # LCM of 45 8 91 6
