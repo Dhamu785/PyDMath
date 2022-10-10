@@ -4,10 +4,9 @@ import math
 def hcf(args):
     q = []
     if isinstance(args, list):
-        if args[-1]== '':
-            return "Don't leave space at last"
-        elif args[0]== '':
-            return "Don't leave space at first"
+        for i in range(len(args)):
+            if '' in args:
+                args.remove('')
         for i in args:
             try:
                 q.append(int(i))
