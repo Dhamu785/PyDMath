@@ -136,6 +136,8 @@ def lcm(lit):
         for i in range(len(lit)):
             if '' in lit:
                 lit.remove('')
+            if '0' in lit:
+                return '0 not allowed'
         try:
             for i in lit:
                 li.append(int(i))
