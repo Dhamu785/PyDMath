@@ -1,4 +1,4 @@
 from PyDMath import hcf,lcm
 a= input()
 
-print(lcm(a.split(' ')))
+print(hcf(a.split(' ')))

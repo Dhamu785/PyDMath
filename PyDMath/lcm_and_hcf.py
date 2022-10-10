@@ -7,6 +7,8 @@ def hcf(args):
         for i in range(len(args)):
             if '' in args:
                 args.remove('')
+            if '0' in args:
+                args.remove('0')
         for i in args:
             try:
                 q.append(int(i))
