@@ -4,6 +4,10 @@ import math
 def hcf(args):
     q = []
     if isinstance(args, list):
+        if args[-1]== '':
+            return "Don't leave space at last"
+        elif args[0]== '':
+            return "Don't leave space at first"
         for i in args:
             try:
                 q.append(int(i))
@@ -129,11 +133,15 @@ def lcm2(args):
 def lcm(lit):
     li = []
     if isinstance(lit, list):
+        if lit[-1]== '':
+            return "Don't leave space at last"
+        elif lit[0]== '':
+            return "Don't leave space at first"
         try:
             for i in lit:
                 li.append(int(i))
         except:
-            return 'Please enter numbers seperated by space'
+            return 'Only, numbers allowed with space seperated'
 
         prime_no = [2,3,5,7,11,13,17,19,23,29,31,37,41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
         prime_factors = []
