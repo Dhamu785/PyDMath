@@ -133,10 +133,9 @@ def lcm2(args):
 def lcm(lit):
     li = []
     if isinstance(lit, list):
-        if lit[-1]== '':
-            return "Don't leave space at last"
-        elif lit[0]== '':
-            return "Don't leave space at first"
+        for i in range(len(lit)):
+            if '' in lit:
+                lit.remove('')
         try:
             for i in lit:
                 li.append(int(i))
@@ -148,7 +147,7 @@ def lcm(lit):
         if len(li) == 1:
             return 'Please enter more than one number'
 
-        if len(li) == 2:
+        elif len(li) == 2:
             while li[0] > 1.0 or li[1] > 1.0:
                 for i in prime_no:
                     count = 0
