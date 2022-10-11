@@ -19,3 +19,6 @@ class year:
                     return 'Not a leap year'
         else:
             return y
+
+    def find_dat(self,date):
+        pass
