@@ -21,14 +21,16 @@ class year:
             return y
 
     def find_day(self,date,month,year):
+        year = int(year) - int(year[2:])
+        print(year)
         y = None
-        if int(year)/100 == 0.25:
+        if year/100 == 0.25:
             y = 5
-        elif int(year)/100 == 0.5:
+        elif year/100 == 0.5:
             y = 3
-        elif int(year)/100 == 0.75:
+        elif year/100 == 0.75:
             y = 1
-        elif int(year)/100 == 0:
+        elif year/100 == 0:
             y = 0
         else:
             y = 'Error'
