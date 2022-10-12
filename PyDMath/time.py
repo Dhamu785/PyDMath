@@ -20,5 +20,5 @@ class year:
         else:
             return y
 
-    def find_dat(self,date):
-        pass
+    def find_day(self,date,month,year):
+        print(date,month,year)

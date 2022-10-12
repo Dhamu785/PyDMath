@@ -1,4 +1,5 @@
-from PyDMath import intrest
-a= intrest()
-print(a.si.__doc__)
-print(a.si(5,9,6))
+from PyDMath import intrest,year
+a= year()
+c = input()
+b = c.split('-')
+print(a.find_day(b[0],b[1],b[2]))
