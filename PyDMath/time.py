@@ -22,6 +22,7 @@ class year:
     
     def year(self,y):
         year = int(y) - int(y[2:])
+        print(int(y[2:]))
         yr = None
         if str(year/400)[-2:] == '25':
             yr = 5
@@ -36,5 +37,13 @@ class year:
         return yr
 
     def find_day(self,date,month,year):
-        yr = self.year(year)
-        return yr
+        yr = self.year(str(int(year)-1))
+        month_days = [3,1,3,2,3,2,3,3,2,3,2,3]
+        if self.leap_year(year) == 'Leap year':
+            month_days[1] = 1
+        else:
+            month_days[1] = 0
+        month_total_days = 0
+        for i in range(0,int(month)-1):
+            month_total_days = month_total_days + month_days[i]
+        return yr + (month_total_days%7) + (int(date))%7
