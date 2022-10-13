@@ -19,19 +19,22 @@ class year:
                     return 'Not a leap year'
         else:
             return y
+    
+    def year(self,y):
+        year = int(y) - int(y[2:])
+        yr = None
+        if str(year/400)[-2:] == '25':
+            yr = 5
+        elif str(year/400)[-2:] == '.5':
+            yr = 3
+        elif str(year/400)[-2:] == '75':
+            yr = 1
+        elif str(year/400)[-2:] == '.0':
+            yr = 0
+        else:
+            yr = 'Error'
+        return yr
 
     def find_day(self,date,month,year):
-        year = int(year) - int(year[2:])
-        print(year)
-        y = None
-        if year/100 == 0.25:
-            y = 5
-        elif year/100 == 0.5:
-            y = 3
-        elif year/100 == 0.75:
-            y = 1
-        elif year/100 == 0:
-            y = 0
-        else:
-            y = 'Error'
-        return y
+        yr = self.year(year)
+        return yr
