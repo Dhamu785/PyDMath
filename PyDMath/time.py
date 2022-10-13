@@ -38,6 +38,8 @@ class year:
 
     def find_day(self,date,month,year):
         yr = self.year(str(int(year)-1))
+
+        # year difference
         month_days = [3,1,3,2,3,2,3,3,2,3,2,3]
         if self.leap_year(year) == 'Leap year':
             month_days[1] = 1
@@ -46,4 +48,5 @@ class year:
         month_total_days = 0
         for i in range(0,int(month)-1):
             month_total_days = month_total_days + month_days[i]
+
         return yr + (month_total_days%7) + (int(date))%7
