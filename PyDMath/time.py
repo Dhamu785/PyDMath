@@ -71,4 +71,4 @@ class year:
         print('month',month_total_days)
         print('day',int(date)%7)
 
-        return yr + (month_total_days%7) + (int(date))%7 + yrs%7
+        return yr + (month_total_days%7) + (int(date)%7) + (yrs%7)
