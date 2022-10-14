@@ -68,6 +68,4 @@ class year:
             month_total_days = month_total_days + month_days[i]
 
         ky = yr + (month_total_days%7) + (int(date)%7) + (yrs%7)
-        return result[ky]
-
-# 5-8-2001
+        return result[ky%7]
