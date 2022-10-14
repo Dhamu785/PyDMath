@@ -69,3 +69,5 @@ class year:
 
         ky = yr + (month_total_days%7) + (int(date)%7) + (yrs%7)
         return result[ky]
+
+# 5-8-2001
