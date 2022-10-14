@@ -67,4 +67,5 @@ class year:
         for i in range(0,int(month)-1):
             month_total_days = month_total_days + month_days[i]
 
-        return yr + (month_total_days%7) + (int(date)%7) + (yrs%7)
+        ky = yr + (month_total_days%7) + (int(date)%7) + (yrs%7)
+        return result[ky]
