@@ -50,6 +50,7 @@ class year:
             return leap_yr*2 + nml_yr
 
     def find_day(self,date,month,year):
+        result = {0:'Sunday',1:'Monday',2:'Tuesday',3:'Wednesday',4:'Thursday',5:'Friday',6:'Saturday'}
         # year calculation
         yr = self.year(str(int(year)-1))
 
@@ -65,10 +66,5 @@ class year:
         month_total_days = 0
         for i in range(0,int(month)-1):
             month_total_days = month_total_days + month_days[i]
-
-        print('year:',yr)
-        print('diff',yrs%7)
-        print('month',month_total_days)
-        print('day',int(date)%7)
 
         return yr + (month_total_days%7) + (int(date)%7) + (yrs%7)
