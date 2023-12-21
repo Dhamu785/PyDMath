@@ -1,7 +1,12 @@
 import numpy as np
 import math
 
-def hcf(args):
+def hcf(args : list) -> int | float:
+    """
+    It finds the hcf of the given numbers.
+    Positional argunment
+    args - List of numbers
+    """
     q = []
     if isinstance(args, list):
         for i in range(len(args)):
@@ -39,7 +44,7 @@ def hcf(args):
         else:
             return 'It accepts only 5 values'
     else:
-        return 'Values must be seperated by space'
+        return 'Values must be seperated by comma'
 
 def lcm2(args):
     r = []
@@ -131,7 +136,12 @@ def lcm2(args):
         return 'It accepts only 5 values'
 
 
-def lcm(lit):
+def lcm(lit:list) -> int | float:
+    """
+    It finds the lcm of the given numbers.
+    Positional argunment
+    lit - List of numbers
+    """
     li = []
     if isinstance(lit, list):
         for i in range(len(lit)):
@@ -143,7 +153,7 @@ def lcm(lit):
             for i in lit:
                 li.append(int(i))
         except:
-            return 'Only, numbers allowed with space seperated'
+            return 'Only, numbers allowed with comma seperated'
 
         prime_no = [2,3,5,7,11,13,17,19,23,29,31,37,41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
         prime_factors = []
@@ -229,7 +239,7 @@ def lcm(lit):
             return math.prod(prime_factors)
 
     else:
-        return 'Values must be seperated by space'
+        return 'Values must be seperated by comma'
 
 
 
