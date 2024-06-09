@@ -9,7 +9,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 
-VERSION = '0.2'
+VERSION = '0.3'
 DESCRIPTION = 'Solving the maths problems'
 LONG_DESCRIPTION = 'A package that allows to solve fundamental math problems.'
 
@@ -23,7 +23,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=long_description,
     packages=find_packages(),
-    install_requires=['math', 'numpy'],
+    install_requires=['numpy'],
     keywords=['python', 'math', 'problems', 'mathematics', 'scientific calculations'],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
