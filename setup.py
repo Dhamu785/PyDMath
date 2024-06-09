@@ -9,7 +9,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 
-VERSION = '0.1'
+VERSION = '0.2'
 DESCRIPTION = 'Solving the maths problems'
 LONG_DESCRIPTION = 'A package that allows to solve fundamental math problems.'
 
@@ -18,7 +18,7 @@ setup(
     name="PyDMath",
     version=VERSION,
     author="Dhamodharan",
-    author_email="dhamodharan1888.com>",
+    author_email="dhamodharan1888@gmail.com>",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
@@ -26,7 +26,7 @@ setup(
     install_requires=['math', 'numpy'],
     keywords=['python', 'math', 'problems', 'mathematics', 'scientific calculations'],
     classifiers=[
-        "Development Status :: 1 - Development",
+        "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
