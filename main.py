@@ -1,4 +1,5 @@
-from numbersD import intrest,year
+from numbersD import intrest, year
+
 a= year()
 c = input()
 b = c.split('-')
