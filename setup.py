@@ -9,13 +9,13 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 
-VERSION = '0.3'
-DESCRIPTION = 'Solving the maths problems'
-LONG_DESCRIPTION = 'A package that allows to solve fundamental math problems.'
+VERSION = '0.0.1'
+DESCRIPTION = 'Solving the aptitude problems'
+LONG_DESCRIPTION = 'A package that allows to solve apitude math problems.'
 
 # Setting up
 setup(
-    name="PyDMath",
+    name="numbersD",
     version=VERSION,
     author="Dhamodharan",
     author_email="dhamodharan1888@gmail.com>",
